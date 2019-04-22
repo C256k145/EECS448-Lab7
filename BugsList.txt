@@ -1,0 +1,13 @@
+The only bug in this code is that isEmpty always returns true,
+which causes every other issue.
+-addFront appears to function correctly, but only because it thinks
+that the list is empty, so it makes the new element the head of the list.
+-addBack does not work because it thinks the list is empty so it makes
+the new element the head of the new list.
+-removeback and removeFront dont do anything because they think the list is
+already empty, and therefore remove nothing.
+-search works correctly, because it does not depend on isEmpty. it simply uses
+the functions of the Node to iterate through the list and get the values.
+-size works correctly, because the m_size member variable is still incremented
+every addBack and addFront are called, and it is also still decremented whenever
+removeFront and removeBack are called.
